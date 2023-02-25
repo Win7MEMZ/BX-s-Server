@@ -1,2 +1,2 @@
-# bx.win7memz.org
+BX's Server
 Why do you see this?
