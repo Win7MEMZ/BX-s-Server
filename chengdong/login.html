@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+.login-container {
+max-width: 400px;
+margin: 50px auto;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+box-sizing: border-box;
+}
+
+button {
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#verification-code {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #fff;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</head>
+<body>
+<div class="login-container">
+    <h2>用户登录</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="用户名" required>
+        <input type="password" id="password" placeholder="密码" required>
+<p>登录功能正在测试，您无法正常使用登录功能！</p>
+        <button type="submit">登录</button>
+    </form>
+</div>
+
+<div id="verification-code"></div>
+
+<script>
+        // JavaScript代码
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // 在这里添加登录验证逻辑，可以与数据库或其他验证方式交互
+            
+            if (username === "admin" && password === "password") {
+                alert("登录成功！");
+                window.location.href  = "index.html";
+            } else {
+                alert("登录失败，请检查用户名和密码！");
+            }
+        });
+    </script>
+
+</body>
+</html>

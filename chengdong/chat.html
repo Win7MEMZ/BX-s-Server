@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BxBot</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chat-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .message {
+        margin: 10px 0;
+    }
+
+    .user-message {
+        background-color: #e2f7cb;
+        padding: 10px 15px;
+        border-radius: 15px;
+        display: inline-block;
+        max-width: 70%;
+    }
+
+    .system-message {
+        background-color: #f2f2f2;
+        padding: 10px 15px;
+        border-radius: 15px;
+        display: inline-block;
+        max-width: 70%;
+    }
+
+    .login-btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+<div class="chat-container">
+    <div id="messageHistory"></div>
+    <div class="message system-message" id="aiMessage">你好，我是BxBot，请问有什么可以帮助您的吗？</div>
+    <div>
+        <textarea id="userInput" rows="3" cols="50" placeholder="请输入您的消息..."></textarea>
+        <br>
+        <button class="login-btn" onclick="sendMessage()">发送</button>
+    </div>
+</div>
+
+
+<script>
+function sendMessage() {
+    var userInput = document.getElementById("userInput").value;
+    if (userInput.trim() === "") {
+        return;
+    }
+
+    var userMessageElement = document.createElement("div");
+    userMessageElement.className = "message user-message";
+    userMessageElement.textContent = userInput;
+
+    var messageHistory = document.getElementById("messageHistory");
+    messageHistory.appendChild(userMessageElement);
+    messageHistory.appendChild(document.createElement("br")); // 插入换行
+
+    document.getElementById("userInput").value = "";
+
+    getAIResponse(userInput);
+}
+
+function displayAIResponse(response) {
+    var aiMessageElement = document.createElement("div");
+    aiMessageElement.className = "message system-message";
+    aiMessageElement.textContent = response;
+
+    var messageHistory = document.getElementById("messageHistory");
+messageHistory.insertBefore(aiMessageElement, document.getElementById("userInput").parentNode);
+messageHistory.insertBefore(document.createElement("br"), document.getElementById("userInput").parentNode); // 插入换行
+
+}
+
+
+
+function getAIResponse(userInput) {
+
+    var predefinedResponses = {
+        
+	"城东ACT": "https://win7memz.github.io/chengdong"
+    };
+
+    var aiResponse = predefinedResponses[userInput] || "抱歉，聊天功能正在测试，您无法正常使用此功能！";
+
+    var aiMessageElement = document.createElement("div");
+aiMessageElement.className = "message system-message";
+aiMessageElement.textContent = aiResponse;
+
+document.querySelector(".chat-container").appendChild(aiMessageElement);
+
+
+}
+
+</script>
+</body>
+</html>
