@@ -102,6 +102,8 @@
 
 
 <script type="text/javascript">
+  alert("因城东服务器关闭，该网站已一并弃用，系统将自动退回上个网站。");
+window.history.back();
 var scriptDom = document.createElement('script')
 var dateServerTemp = new Date()
 scriptDom.src = 'https://static0.xesimg.com/talcode/assets/toolkit/website-deploy-disclaimer-toast-insert.js?t=' + dateServerTemp.getFullYear() + (dateServerTemp.getMonth() + 1 < 10 ? '0' + (dateServerTemp.getMonth() + 1) : dateServerTemp.getMonth() + 1) + dateServerTemp.getDate() + dateServerTemp.getHours() + parseInt(dateServerTemp.getMinutes() / 5)
