@@ -37,3 +37,8 @@ a:hover {
   .shadow-text {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
+h1 img {
+     width: 50px; /* 根据需求调整图像宽度 */
+     height: auto;
+     margin-right: 10px; /* 在图像和标题文字之间添加一些间距 */
+   }
