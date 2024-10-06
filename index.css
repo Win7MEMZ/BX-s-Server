@@ -1,0 +1,39 @@
+h1 {
+    color: red;
+    font-size: 24px;
+  }
+a:link {
+    color: #ff5722;
+    text-decoration: none;
+  }
+a:visited {
+    color: #6c757d;
+  }
+a:hover {
+    color: #ff5722;
+    text-decoration: none;
+  }
+.jump-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f2f89f;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+ .jump-button:hover {
+    background-color: #f2f89f;
+  }
+  
+  a {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  
+  a:hover {
+    transform: scale(1.1);
+  }
+  .shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
