@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Match Wits 智斗</title>
+
+<style>
+    /* CSS样式 */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.feature {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+</style>
+
+</head>
+<body id="home">
+    <header>
+        <h1>Match Wits - 智斗游戏</h1>
+    </header>
+
+<nav>
+    <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#introduce">介绍</a></li>
+        <li><a href="download.html">下载</a></li>
+        <li><a href="#contact">联系我们</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="feature" id="introduce">
+        <h2>游戏介绍</h2>
+        
+	    <p>智斗（Match Wits）是BX团队成立前由BX独立编写的一款游戏。</p>
+	    <p>在《智斗》中，玩家需要通过购买各种武器来抵御不断逼近的怪物大军。游戏的核心机制在于，玩家可以利用资源购买不同的武器，或是选择扩展怪物需要穿越的路程，以此作为战术布局的一部分。</p>
+	    <p>随着游戏进度的不断推进，怪物的生命值（血量）会逐渐增厚，移动速度也会随之加快，这意味着它们将变得更加难以击败。这一变化要求玩家必须更加审慎地规划，合理购买武器和路程，让怪物尽可能不要到达终点。</p>
+	    <p>在《智斗》中，当怪物成功到达游戏设定的终点时，就会减少玩家的生命值。生命值开始是100滴，理论上生命值可以无限大，但是由系统补给的生命值会到200时停止。因此，玩家不仅要关注武器，还要巧妙购买路程，延长怪物的行进路线，为自己争取更多的准备时间。这是一场智慧与策略的较量，玩家需要不断尝试和优化战术，才能在这场无尽的防守战中取得最终的胜利。</p>
+           
+    </section>
+    <section class="feature" id="introduce">
+        <h2>游戏特色</h2>
+        <ul>
+            <li><h3>新《植物大战僵尸》</h3><p>智斗这款游戏，类似于《植物大战僵尸》，不过取消了怪物吃植物的规则，加入了可延长的路程。</p></li>
+            <li><h3>越来越厚的血量</h3><p>在这款游戏中，怪物的最高血量和怪物数量每5关就会升级，从10血到1000000血，怪物到达终点时扣除的血量也会变高。</p></li>
+            <li><h3>掉血多，速度快</h3><p>如果一个怪物到达终点时扣除的血量很高，那么理论上速度也会越快（因为速度是由掉血量决定的），这就需要玩家尽量利用路程和武器去让怪物不到达终点。</p></li>
+        </ul>
+    </section>
+
+<section class="feature" id="download">
+        <h2>游戏下载</h2>
+        <p>智斗依赖于启动器，请下载启动器打开游戏，并请注意：游戏依赖于g++，如果你的电脑没有g++或无法正常使用g++，游戏将无法运行。这就需要在网上自行下载合适的g++。<br><b>特别地，如果电脑中存在g++，但是环境变量中没有g++，请通过启动器的提示添加环境变量。</b></p>
+	<p>你也可以下载独立纯享版，但BX团队不保证该版本的稳定性。</p>
+	<a href="download.html" style="padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px;"><span class="icon-download3"></span> 现在下载</a>
+    </section>
+
+
+<section class="feature" id="contact">
+    <h2>联系我们</h2>
+    <p>如果您有任何问题或疑问，请随时发送邮件到341723147@qq.com或通过QQ群与我们联系</p>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Match Wits 智斗官网. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // JavaScript代码
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // 在这里添加登录验证逻辑，可以与数据库或其他验证方式交互
+        
+        if (username === "admin" && password === "password") {
+            alert("登录成功！");
+            window.location.href  = "choose.html";
+        } else {
+            alert("登录失败，请检查用户名和密码！");
+        }
+    });
+</script>
+
+</body>
+</html>
