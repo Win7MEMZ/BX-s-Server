@@ -21,4 +21,4 @@ int main()
 ### [好东西1](https://win7memz.github.io)
 ### [好东西2](https://space.bilibili.com/649846967)
 ### [好东西3](https://www.luogu.com.cn/paste/m5l62h64)
-###### $\textsf{\color{white}pxw AK CSP!}$
+###### $\textsf{\color{white}pingjun AK CSP!}$
